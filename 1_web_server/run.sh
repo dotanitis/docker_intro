@@ -20,13 +20,14 @@ case "$1" in
     echo "Stopping Docker container..."
     docker stop web
     ;;
+  test)
+    echo "Testing the container by running browser"
+    firefox http://localhost:8080
+    ;;
   *)
     echo "Invalid option!"
     echo "Usage: $0 {build|run|stop}"
     exit 1
     ;;
 esac
-
-# 
-
 
